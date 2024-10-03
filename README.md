@@ -22,6 +22,21 @@
 
 The target variable is 'y', indicating whether the customer purchased the product (yes or no).
 
+# Data Preprocessing and Feature Encoding
+**1. Handling Outliers**
+
+For numerical columns like balance, duration, and campaign, we calculated the Interquartile Range (IQR) to identify and potentially handle outliers. We computed the lower and upper bounds for outliers using the formula:
+Lower Bound = Q1 - 1.5 * IQR
+Upper Bound = Q3 + 1.5 * IQR This ensures that values outside this range are considered outliers.   
+
+**2. Label Encoding for Categorical Variables**
+
+For categorical columns (job, marital, education, default, housing, loan, contact, poutcome, month, and y), we used LabelEncoder to convert string labels into numerical values. This transformation is crucial for machine learning algorithms to process categorical data effectively.                                               
+
+**3. Modeling**
+
+After preprocessing, the data was used to train a decision tree classifier using both gini and entropy criteria. Hyperparameter tuning (using GridSearchCV) was employed to improve accuracy, and the best model achieved around 90% accuracy.
+
 # Overall Insights                        
 1. **90% Accuracy, but Some Misses:** The model is doing well with 90% accuracy, but it still misses predicting some customers who would actually make a purchase.                                      
 
