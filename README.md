@@ -22,7 +22,7 @@
 
 The target variable is 'y', indicating whether the customer purchased the product (yes or no).
 
-**Overall Insights**                         
+# Overall Insights                        
 1. **90% Accuracy, but Some Misses:** The model is doing well with 90% accuracy, but it still misses predicting some customers who would actually make a purchase.                                      
 
 2. **Gini Beats Entropy:** Using the Gini method slightly outperformed the entropy method, showing that small changes in how decisions are made can affect the results.                                   
