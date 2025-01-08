@@ -25,13 +25,13 @@ The target variable is 'y', indicating whether the customer purchased the produc
 # Data Preprocessing and Feature Encoding
 **1. Handling Outliers**
 
-For numerical columns like balance, duration, and campaign, we calculated the Interquartile Range (IQR) to identify and potentially handle outliers. We computed the lower and upper bounds for outliers using the formula:
+For numerical columns like balance, duration, and campaign, I calculated the Interquartile Range (IQR) to identify and potentially handle outliers. I computed the lower and upper bounds for outliers using the formula:
 Lower Bound = Q1 - 1.5 * IQR
 Upper Bound = Q3 + 1.5 * IQR This ensures that values outside this range are considered outliers.   
 
 **2. Label Encoding for Categorical Variables**
 
-For categorical columns (job, marital, education, default, housing, loan, contact, poutcome, month, and y), we used LabelEncoder to convert string labels into numerical values. This transformation is crucial for machine learning algorithms to process categorical data effectively.                                               
+For categorical columns (job, marital, education, default, housing, loan, contact, poutcome, month, and y), I used LabelEncoder to convert string labels into numerical values. This transformation is crucial for machine learning algorithms to process categorical data effectively.                                               
 
 **3. Modeling**
 
